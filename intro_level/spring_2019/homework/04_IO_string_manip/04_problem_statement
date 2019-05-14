@@ -1,0 +1,28 @@
+Homework 4 Instructions
+
+In this homework, you will be tasked with creating functions to manipulate strings that come from files and then outputting the strings to 
+another file. All of these functions are housed together in a menu. The user will be asked to input a file name and then their menu 
+selection.
+
+The menu is this:
+
+Get rid of white space
+Print amount of characters in the file
+Print amount of words in the file
+Replace all vowels with 3's
+Print the file lines in reverse order
+
+Input will look like this: "input1.txt 2". You can assume there will be no numbers in the input files. Make sure that you have variables 
+to store both the input file name and the integer selection.
+
+Menu Items Explained
+
+Delete all spaces between words and print that to the new file, line-by-line
+Count the number of characters in the whole file, not including spaces, and print that to the new file
+Count the number of words in the whole file and print that to the new file
+Replace all vowels with 3's and print that to the new file, line-by-line
+Given the order of the file lines (Ex: 1 2 3), print to the new file the reverse (Ex: 3 2 1)
+Each operation must be performed by a separate function.
+
+There should be nothing printed to the console, all input is taken from one file and outputted to another file! The output file should 
+be named output.txt!
