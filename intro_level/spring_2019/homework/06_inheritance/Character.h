@@ -10,8 +10,8 @@ public:
    //constructors (in-line)
    Character(): occupation("Cabbage Merchant"), race("Human"), gender('M') {};
    Character(string occTemp, string raceTemp, char genderTemp): occupation(occTemp), 
-	 																														  race(raceTemp), 
-																																gender(genderTemp) {};
+							        race(raceTemp), 
+               							gender(genderTemp) {};
    
    //getter functions
    string getOccupation() const;
