@@ -24,6 +24,6 @@ bool Character::operator==(const Character &other) {
 //stats function
 void Character::stats() const {
 	cout << "Occupation: " << occupation << endl;
-  cout << "Race: " << race << endl;
-  cout << "Gender: " << gender << endl;
+ 	cout << "Race: " << race << endl;
+ 	cout << "Gender: " << gender << endl;
 }
