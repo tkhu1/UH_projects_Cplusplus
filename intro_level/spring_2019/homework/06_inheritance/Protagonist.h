@@ -1,5 +1,6 @@
 #ifndef PROTAGONIST_H
 #define PROTAGONIST_H
+
 //include weapon header file
 #include "Weapon.h"
 #include "Character.h"
@@ -10,34 +11,34 @@ using namespace std;
 /*syntax to make class Protagonist derived from class Character*/
 class Protagonist : public Character {
 	public:
-	//constructors
-	Protagonist();
-	Protagonist(string ty, int ag);
+		//constructors
+		Protagonist();
+		Protagonist(string ty, int ag);
 
-	//getter functions
-	string getType() const;
-	int getAge() const;
-	string getEquipment() const;
+		//getter functions
+		string getType() const;
+		int getAge() const;
+		string getEquipment() const;
 
-	//setter functions
-	void setType(string t);
-	void setAge(int a);
-	void setEquipment(string e);
+		//setter functions
+		void setType(string t);
+		void setAge(int a);
+		void setEquipment(string e);
 
-	//overloaded operator function
-	bool operator==(const Protagonist &protag);
+		//overloaded operator function
+		bool operator==(const Protagonist &protag);
 
-	//stats function
-	void stats() const;
+		//stats function
+		void stats() const;
 
 	private:
-	//variables
-	int age;
-	Weapon equipment;
+		//variables
+		int age;
+		Weapon equipment;
 
 	protected:
-	//variable
-  string type;
+		//variable
+ 		string type;
 };
 
 #endif
