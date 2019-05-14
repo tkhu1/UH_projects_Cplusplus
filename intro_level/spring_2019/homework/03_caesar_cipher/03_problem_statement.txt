@@ -2,17 +2,23 @@ Encryption using Pointers and Dynamic Arrays
 
 Objective:
 
-Agent James Vond, one of our secret agents, Agent 008, has recently been captured in the Caribbean. We have been able to establish contact with him, but need help sending him messages in secret to let him know help is on the way. We believe we can send him messages using a Caesar Cipher, but need your help encoding it. Agent Vond, we task you with encrypting the message and helping Agent 008 escape the Caribbean
+Agent James Vond, one of our secret agents, Agent 008, has recently been captured in the Caribbean. We have been able to establish 
+contact with him, but need help sending him messages in secret to let him know help is on the way. We believe we can send him messages 
+using a Caesar Cipher, but need your help encoding it. Agent Vond, we task you with encrypting the message and helping Agent 008 escape 
+the Caribbean
 
 Sincerely, M.
 
 Assignment:
 
-The Caesar Cipher technique is one of the earliest and simplest method of encryption. It’s a substitution cipher, i.e., each letter of a given text is replaced by a letter some fixed number of positions down the alphabet. For example with a shift of 1, A would be replaced by B, B would become C, and so on.
+The Caesar Cipher technique is one of the earliest and simplest method of encryption. It’s a substitution cipher, i.e., each letter of 
+a given text is replaced by a letter some fixed number of positions down the alphabet. For example with a shift of 1, A would be 
+replaced by B, B would become C, and so on.
 
 The encryption equation is E(x) = (x + n) % 26.
 
-The x = the numeric letter value, n = number of shifts, and (% 26) is so that whatever value your result is, it will stay within the alphabet range (0-25).
+The x = the numeric letter value, n = number of shifts, and (% 26) is so that whatever value your result is, it will stay within the 
+alphabet range (0-25).
 
 However, since we will be looking at characters in strings, you need to implement ASCII code so that your equation will look more like:
 
@@ -22,11 +28,15 @@ Or
 
   letter = ( ( (letter - 'a') + shift ) % 26 + 'a' ) ) if it is lower case.
 
-You subtract 'A' and 'a' in order to get the value of the letter. In ASCII code, letters are assigned values. For example, 'B' is 66. If I subtract the value of 'A' (65) then I get 1. This helps me encode because I can get the values 0-25 for each letter.
+You subtract 'A' and 'a' in order to get the value of the letter. In ASCII code, letters are assigned values. For example, 'B' is 66. 
+If I subtract the value of 'A' (65) then I get 1. This helps me encode because I can get the values 0-25 for each letter.
 
-Your assignment is to implement a dynamic string array in order to store a message of variable length, and then a pointer to iterate through each letter of the string in order to encrypt it using the equations given above.
+Your assignment is to implement a dynamic string array in order to store a message of variable length, and then a pointer to iterate 
+through each letter of the string in order to encrypt it using the equations given above.
 
-You will need to ask the user for the amount of words in the message and then create your dynamic array that way. If the amount of words is a negative number or equal to zero you should output to the screen "Invalid value. Please Re-enter a number of positive value" until they have the correct input.
+You will need to ask the user for the amount of words in the message and then create your dynamic array that way. If the amount of 
+words is a negative number or equal to zero you should output to the screen "Invalid value. Please Re-enter a number of positive value" 
+until they have the correct input.
 
 Get Message
 ---------------
@@ -36,7 +46,8 @@ After they have input all the strings required, ask for the number of letter shi
 
 Encrypt
 ---------------
-Encrypt each letter in each string using the equations provided above if the getMessage pointer isn't null (aka if Get Message option has already been called)
+Encrypt each letter in each string using the equations provided above if the getMessage pointer isn't null (aka if Get Message option 
+has already been called)
 
 Print Message
 ---------------
@@ -48,9 +59,11 @@ Simply quits out of the loop
 
 Input:
 
-You many assume that the input to be encrypted will only consist of capital and lower letters, and no other symbols such as white spaces, numbers, or special characters will have to be encrypted.
+You many assume that the input to be encrypted will only consist of capital and lower letters, and no other symbols such as white 
+spaces, numbers, or special characters will have to be encrypted.
 
-In order to choose the different options you will take an integer value as input. 1 is for Get Message, 2 is for Encrypt, 3 is for Print, 4 is for Quit
+In order to choose the different options you will take an integer value as input. 1 is for Get Message, 2 is for Encrypt, 3 is for 
+Print, 4 is for Quit
 
 Requirements:
 
@@ -58,7 +71,8 @@ Use a dynamic array to store a message of variable length
 
 Use a pointer to iterate through each string and encrypt it
 
-Do not allow for number of letter shifts to be > 26 (Must be in the range of 0-25 aka the range of 26) [Ex: If I give you 27, your shift should end up being 1] [Hint: %]
+Do not allow for number of letter shifts to be > 26 (Must be in the range of 0-25 aka the range of 26) [Ex: If I give you 27, your 
+shift should end up being 1] [Hint: %]
 
 Do not expect int to hold all possible values when I input the value of shift, test very large numbers
 
