@@ -1,0 +1,72 @@
+Objective
+
+For this assignment, you will be working with object-oriented programming(OOP). More specifically, you will be extending your knowledge 
+of OOP by utilizing an abstraction called inheritance. With inheritance, classes will be able to derive its members and behavior from 
+another class. With this in mind, you will use your current knowledge of classes to implement inheritance and function overloading.
+
+Adventure Dilemma
+
+"You slowly open your eyes and find yourself awake lying on a cold, stone floor. You look around and notice metal bars--bars meant to 
+prevent someone from entering or leaving. Were they trying to keep out intruders? You try to hoist yourself up but end up stumbling 
+back down to the ground. The shackles dangling around both your wrists restrict your movement and you take notice that these bars were 
+not meant to keep people out, but to keep you in. You look around and notice a dainty mirror. You walk up to the mirror to see your 
+looks."
+
+As with most RPGs or other genres of games, character creation is a key element in making any game enjoyable because it allows the 
+player to feel more immersed by relating to the fictional character that they made. You will be utilizing inheritance to do a simple 
+version of a character creation where you will be making objects to keep track of a character stats.
+
+Three classes are necessary in order to complete this assignment. These classes will be called Character, Protagonist, and Weapon.
+
+Character Class
+--------------------------
+This class (which has the header file already completed for you) will have:
+
+Variable called "occupation" of data type string (Private member)
+Variable called "race" of data type string (Protected member)
+Variable called "gender" of data type char (Protected member) ('M' for Male, 'F' for Female, and 'O' for Other)
+Default constructor that sets occupation to "Cabbage Merchant", race to "Human", and gender to 'M'. (Public)
+A parameterized constructor that takes occupation, race, and gender. (Public)
+Accessor functions to access these variables (Public functions)
+Mutator functions to change these variables (Public functions)
+An overloaded operator function for "==" that checks to see if two characters' race and gender are the same.
+A public function called "stats()" that prints out the variables in this format:
+
+Occupation: Cabbage Merchant
+Race: Human
+Gender: M
+
+Weapon Class
+-------------------------
+This class (which is already completed for you) will have:
+
+Variable called "type" of data type string (Private member) (Ex: "Sword", "Book", "Bow", etc.)
+Default constructor that sets type to "Sword". (Public)
+A parameterized constructor that takes type. (Public)
+Accessor function to access type (Public function)
+Mutator function to change type (Public function)
+A public function called "stats()" that prints out the variable in this format:
+
+Weapon: Sword
+
+Protagonist Class derived from the Character Class
+------------------------
+Unlike the Character Class, you will be putting in more details so that you are a protagonist and not just an NPC. This class includes:
+
+Variable called "type" of data type string (Protected member) (Ex: "Warrior", "Mage", "Cleric", etc.)
+Variable called "age" of data type int (Private member)
+Variable called "equipment" of data type Weapon (Private member)
+Default constructor that sets type to "Warrior" and age to 25. (Public)
+A parameterized constructor that takes type and age. (Public)
+Accessor functions to access type, age, and equipment(Public function)
+Mutator functions to change type, age, and equipment(Public function)
+An overloaded operator "==" that checks to see if two protagonists are the same (all attributes must be the same).
+A public function that overloads "stats()" that prints out the variable in this format:
+
+Race: Human
+Gender: M
+Class: Warrior
+Weapon: Sword
+Age: 25
+
+In order to correctly print out the string from the Weapon Class, you must use the "stats()" function from the Weapon Class.
