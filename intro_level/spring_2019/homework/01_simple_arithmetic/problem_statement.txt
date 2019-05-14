@@ -1,0 +1,91 @@
+Problem Statement
+
+Write a program that takes in 3 inputs [players (int type), expected game time (double type), team (char type)] and calculates actual game time (double) based on the following conditions:
+
+if the number of players or the expected game time is less than or equal to ZERO, it should output Wrong input
+
+if the number of players is greater than 0 and less than or equal to 6
+  and if they are on the ‘R’ or ‘r’ team, their game time will be 10% faster.
+  and if they are on the ‘B’ or ‘b’ team, their game time will be 15% faster.
+  and if they are on the ‘Y’ or ‘y’ team, their game time will be 20% faster.
+  and if they are on any other team, they will play 0% faster.
+
+If the number of players is greater than 6 but less than or equal to 12
+  and if they are on the ‘R’ or ‘r’ team, their game time will be 20% faster.
+  and if they are on the ‘B’ or ‘b’ team, their game time will be 25% faster.
+  and if they are on the ‘Y’ or ‘y’ team their game time will be 30% faster.
+  and if they are on any other team, they will play 0% faster.
+
+If the number of players is greater than 12 but less than or equal to 18
+  and if they are on the ‘R’ or ‘r’ team, their game time will be 30% faster.
+  and if they are on the ‘B’ or ‘b’ team, their game time will be 35% faster.
+  and if they are on the ‘Y’ or ‘y’ team, their game time will be 40% faster.
+  and if they are on any other team, they will play 0% faster.
+  
+If the amount of players is greater than 18, it should output Too many players
+
+Your program should output the total time played in minutes with only two digits following the decimal point. Even though minutes will be fractionalized, you will not have to convert to seconds but will be expected to understand the conversion regardless (i.e. 1.50 minutes == 1 minutes and 30 seconds). You have to use both if and else statements to write your code.
+
+Formula for calculating actual game time:
+actual_time = expected_time - ( expected_time * ( reduction_percentage / 100 ) )
+
+Hint: In order to print a double up to only two decimal places, include the library iomanip and use the following syntax:
+
+cout << fixed;
+cout << setprecision(2) << actual_time;
+
+Input format: When you enter input in input box in zybooks:
+The first input is amount of players
+Second input is expected game time in minutes
+Third input is the team
+
+Output format:
+It should print the final time based on the amount of players and the team they are on.
+The final time should be printed in minutes up to two decimal places.
+If the amount of players or the expected game time is less than or equal to 0, program should just output Wrong input
+If the mount of players is greater than 18, then just output Too many players
+
+Sample Input 1:
+10 40 r
+10 -> stands for amount of players
+40 -> stands for expected game time in minutes
+r -> stands for team
+
+Sample Output 1:
+32.00 minutes
+
+Sample Input 2:
+0 10 b
+
+Sample Output 2: 
+Wrong input
+
+Sample Input 3:
+19 50 b
+
+Sample Output 3: 
+Too many players
+
+Sample Input 4:
+18 50 e
+
+Sample Output 4: 
+50.00 minutes
+
+Sample Input 5:
+18 50 B
+
+Sample Output 5: 
+32.50 minutes
+
+Sample Input 6:
+18 50 b
+
+Sample Output 6: 
+32.50 minutes
+
+Sample Input 7:
+18 -10 b
+
+Sample Output 7: 
+Wrong Input
