@@ -1,0 +1,68 @@
+Context -
+
+A movie theater is testing a ticket purchasing system that allows customers to select their seat in the theater at the time of purchase. This movie theater has 30 available seats in each theater (numbered 0-29) and once a seat has been selected by one customer, it is marked as booked and cannot be selected by another customer. For the purposes of this simulation, we will assume that patrons are not willing to purchase a ticket if their preferred seat is unavailable, so they will leave without buying a ticket.
+
+Problem -
+
+The purpose of this program is to determine whether this seat selection system is efficient. In order to test efficiency, the manager of the theater has set an acceptable success rate to compare the observed success rate against.
+
+success rate = #  of completed transactions (where the desired seat is not already booked) / # of attempted transactions
+If the observed success rate is less than the acceptable success rate, the simulated set of transactions fails to meet the minimum requirements for efficiency.
+
+To begin the simulation, the user will input a number of iterations to be evaluated as well as the number of attempted transactions per iteration. Iterations can be thought of as showtimes in a given theater. Each iteration begins with 30 empty seats which can then be booked by customers.
+
+We will simulate the selection of seats by using the rand() function to generate random numbers ranging from 0 to 29 corresponding to seats in the theater. In order to use the rand() function, you must first include stdlib.h and call the srand() function and pass a seed value to it. The seed value will be input by the user. Ex:
+
+  #include <stdlib.h>
+  ...
+  int seedVal;
+  cin >> seedVal;
+  srand(seedVal);
+  
+Input -
+The user will input 4 values:
+
+The number of iterations/showtimes to be evaluated
+The number of transactions attempted for each iteration
+The acceptable success rate
+The seed for random number generation
+You will be expected to validate all four inputs. All four values should be non-negative and the success rate should be between 0 and 1 (inclusive). Iterations must be greater than zero. If one of the four input values is not valid, the output should be
+
+  Error. Invalid parameters.
+
+Output -
+Your program should output:
+
+The acceptable success rate determined by the user
+The average attempted sales per iteration
+The average completed sales per iteration
+The observed success rate (number of total completed sales / number of total attempted sales)
+Whether or not the observed success rate is acceptable
+
+Example 1:
+When input is
+
+  10 100 0.5 -1
+
+Output is
+
+  Error. Invalid parameters.
+  
+Example 2:
+When input is
+
+  8 15 0.65 3
+  
+Output is
+
+  Acceptable success rate: 0.65
+  Average attempted sales: 15.00
+  Average completed sales: 12.25
+  Observed success rate: 0.82
+  Observed success rate is acceptable.
+  
+Hints -
+
+In order to get a float or double from an integer operation, you can typecast as shown below
+float variableName = (float) intVariable1 / intVariable2; 
+While the total number of seats is a whole number, success rate and averages can have decimal values. You are expected to represent non-integer values to two decimal places.
