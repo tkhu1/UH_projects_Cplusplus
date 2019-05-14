@@ -17,7 +17,7 @@ DynamicArray::DynamicArray(int size) {
   arraySize = size;
 
   if (arraySize < 1) {
-      arraySize = 1;
+    arraySize = 1;
   }
   arr = new int[arraySize];
   numOfElements = 0;
@@ -28,7 +28,7 @@ DynamicArray::DynamicArray(const DynamicArray &a) {
   arr = new int[a.arraySize];
   // loops and copies array 'a' into arr pointer
   for (int i = 0; i < a.arraySize; i++) {
-      arr[i] = a.arr[i];
+    arr[i] = a.arr[i];
   }
   // copies members   
   arraySize = a.arraySize;
@@ -41,9 +41,9 @@ DynamicArray& DynamicArray::operator=(const DynamicArray& rhs) {
   if (this != &rhs) { 
     delete [] arr;
     
-	  arr = new int[rhs.arraySize];
-	  for(int i = 0; i < rhs.arraySize; i++) {
-		  arr[i] = rhs.arr[i];
+    arr = new int[rhs.arraySize];
+    for(int i = 0; i < rhs.arraySize; i++) {
+      arr[i] = rhs.arr[i];
     }
     // assigns members   
     arraySize = rhs.arraySize;
@@ -94,17 +94,17 @@ void DynamicArray::addElement(int num) {
   if (numOfElements > arraySize) {
     // temp array   
     int tempSize = arraySize * 2;
-	  int *tempArr = new int[tempSize];
+      int *tempArr = new int[tempSize];
     // copies array into temp array
-	  for (int i = 0; i < tempSize; i++) {
-		  tempArr[i] = arr[i];
+      for (int i = 0; i < tempSize; i++) {
+        tempArr[i] = arr[i];
     }
     delete [] arr;
 
     // resizing and recopying into array
     arr = new int[tempSize];
-	  for (int i = 0; i < tempSize; i++) {
-		  arr[i] = tempArr[i];
+      for (int i = 0; i < tempSize; i++) {
+        arr[i] = tempArr[i];
     }
     arr[numOfElements - 1] = num;
 
@@ -133,7 +133,7 @@ void DynamicArray::deleteElement(int num) {
         }
         // skips position of deleted element and resumes copy
         for (int k = i; k < tempSize; k++) {
-            tempArr[k] = arr[k+1];
+          tempArr[k] = arr[k+1];
         }
 
         delete [] arr;
@@ -158,7 +158,7 @@ void DynamicArray::deleteElement(int num) {
         }
         // skips position of deleted element and resumes copy
         for (int k = i; k < tempSize; k++) {
-            tempArr[k] = arr[k+1];
+          tempArr[k] = arr[k+1];
         }
 
         delete [] arr;
