@@ -1,6 +1,7 @@
 Problem Statement
 
-Write a program that takes in 3 inputs [players (int type), expected game time (double type), team (char type)] and calculates actual game time (double) based on the following conditions:
+Write a program that takes in 3 inputs [players (int type), expected game time (double type), team (char type)] and calculates actual 
+game time (double) based on the following conditions:
 
 if the number of players or the expected game time is less than or equal to ZERO, it should output Wrong input
 
@@ -24,17 +25,19 @@ If the number of players is greater than 12 but less than or equal to 18
   
 If the amount of players is greater than 18, it should output Too many players
 
-Your program should output the total time played in minutes with only two digits following the decimal point. Even though minutes will be fractionalized, you will not have to convert to seconds but will be expected to understand the conversion regardless (i.e. 1.50 minutes == 1 minutes and 30 seconds). You have to use both if and else statements to write your code.
+Your program should output the total time played in minutes with only two digits following the decimal point. Even though minutes will 
+be fractionalized, you will not have to convert to seconds but will be expected to understand the conversion regardless (i.e. 
+1.50 minutes == 1 minutes and 30 seconds). You have to use both if and else statements to write your code.
 
 Formula for calculating actual game time:
-actual_time = expected_time - ( expected_time * ( reduction_percentage / 100 ) )
+  actual_time = expected_time - ( expected_time * ( reduction_percentage / 100 ) )
 
 Hint: In order to print a double up to only two decimal places, include the library iomanip and use the following syntax:
 
-cout << fixed;
-cout << setprecision(2) << actual_time;
+  cout << fixed;
+  cout << setprecision(2) << actual_time;6
 
-Input format: When you enter input in input box in zybooks:
+Input format: When you enter input in input box:
 The first input is amount of players
 Second input is expected game time in minutes
 Third input is the team
