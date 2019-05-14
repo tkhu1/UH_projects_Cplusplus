@@ -36,5 +36,5 @@ int main(){
    BeastBoy.setEquipment("Claws");
    BeastBoy.stats();
 	 
-	 return 0;
+   return 0;
 }
