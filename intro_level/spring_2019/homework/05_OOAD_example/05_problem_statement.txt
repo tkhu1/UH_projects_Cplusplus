@@ -1,0 +1,193 @@
+Homework 5: Object-oriented Programming Classes, constructors, and Function overloading
+
+1- Objective
+
+The purpose of this assignment is for students to gain a better understanding of object-oriented programming, classes, accessors, 
+method, destructors, and dynamic allocation and Function overloading.
+
+2- Problem
+
+You have to write a class “DynamicArray” to store a dynamic array of integers and allow manipulations on that array.
+
+It would have the following private attributes:
+
+int *arr : A pointer that points to the array.
+
+int arraySize : An integer that stores the size of the array. It should be greater or equal to one
+
+int numOfElements : An integer that tracks how many elements are in the array.
+
+The constructors will be defined as follows:
+
+Default constructor: the default constructor should set the arraySize to one and initialize the dynamic array of integers.
+    DynamicArray();
+Constructor : In constructor a valid arraySize (at least 1) should be passed. If any number less than 1 is passed to the constructor, 
+you should set arraySize to 1 by default.
+    DynamicArray(int arraySize);
+For both constructors above, the initial number of elements is set to 0.
+
+Copy Constructor: In the copy constructor, you need to implement Deep Copy, so that all elements of the original DynamicArray object 
+are copied in the second object.
+    DynamicArray( const DynamicArray &a)
+Overloaded assignment operator (=): the operator will allow to copy an object into another. Remember that the implementation requires 
+a deep copy of the original object.
+    DynamicArray& operator=(const DynamicArray& rhs)
+  
+The class would also include following public accessor functions and methods:
+
+Accessors:
+    int getArraySize() const;
+    int getNumOfElements() const;
+    
+    string toString() const;
+  toString() method: this function will return a string which stores all elements currently stored in the dynamic array separated 
+  by a comma (and no space before or after the numbers). If there are no elements in the array, it prints out “No element” (without 
+  double quotes). Example: if there are 1 2 3 in the Dynamic array then it outputs "1,2,3" (without double quotes).
+    
+  Important: This method is used by more than one test case to compare output of other methods etc, so inability to implement this 
+  method correctly would result in failing more than one test cases.
+    
+    string toString(int pos) const;
+  You are also required to overload toString so that it will be able to receive an integer parameter and use it to retrieve the 
+  element at that position. The function will return the element stored in the given position as a string. If the position is 
+  less than zero or greater than/equal to the number of elements, it should print "Invalid index". For example, An array has three 
+  elements 10,100,1000. And the position is given 1, it should print the value stored at that index. Here it should print 100.
+
+    void addElement(int num);
+  Add element: this option asks the user to input a number to store into the array, then inserts the number in the array. The number 
+  should be added at the end of the array. If the array does not have room to add another element, the array should be expanded to 
+  2 times its current size before adding the element.
+  
+  Hint: anytime the array size is changed, you should copy the old array elements in a temporary array and de-allocate the old one to 
+  prevent memory leaks. Then, resize the original array and fill with elements from temporary copy. Finally, delete temporary copy.
+    
+    void deleteElement(int num);
+  Delete element: this option should ask the user for a number to remove from the array. This function should only delete the first 
+  occurrence of the to-be deleted number. If the specified number does not exist inside the array, there should be no change in the 
+  array and no output. Anytime an element is deleted from the beginning or middle of the array, all other elements in the array should 
+  be shifted over to fill the empty gap. If the number of elements becomes less than or equal to half the size of the array, the array 
+  should be shrunk down to half its current size. Refer to the hint above to copy the array into a smaller one without producing memory 
+  leaks.
+   
+    ~DynamicArray()
+  Destructor: finally, a destructor should be included to release all memory that has been allocated for the object.
+ 
+Note: In case of any error in input, you don't need to output anything. Either use default values (where it's asked to do so) or ignore 
+that operation/modification for other cases (where there's no default value to set to).
+
+4- Submission guideline
+
+You need to submit three files.DynamicArray.cpp, where you will implement the class. DynamicArray.h where class declaration will be 
+written and main.cpp. 
+
+5- How your code is tested
+
+We will have test benches (small programs), each of which will check a part of your implementation, by creating object(s) of 
+DynamicArray class and then call accessor/methods etc to modify the object and match them with expected changes. For example if you 
+start with a DynamicArray object of size 2 and add three elements we expect the arraySize should be 4. So if we call getArraySize on 
+that object, the output should be 4.
+
+To help you with testing the correctness of your implementation, five sample test benches are provided below. Expected outputs are 
+provided for each test bench which helps you figure out what is testing in each test bench. You can put following code into a main.cpp 
+and run it to test the functionalities of your class. 
+
+Sample Main Function
+
+#include "DynamicArray.cpp"
+
+int main(){
+
+//***********  addElements Function is Tested  ***********
+
+   DynamicArray Darr(1);
+   Darr.addElement(1);
+   Darr.addElement(2);
+   Darr.addElement(3);
+   Darr.addElement(4);
+   Darr.addElement(5);
+   if (Darr.getArraySize() == 8 )
+   {
+       cout << "Correct Result"<<  endl;
+       cout << "array Size after expansion is : 8" << endl<< endl;
+   }
+   else
+   {
+       cout << "Your addElement Function is not correct" << endl;
+       cout << "Your arraySize after Expansion is : " << Darr.getArraySize() << endl;
+       cout << "Expected Output : 8 " <<endl<< endl;
+   }
+   //*********** Constructor with invalid input  is Tested  ***********
+   DynamicArray Darr2(0);
+   if (Darr2.getArraySize() == 1 )
+    {
+       cout << "Correct Result" << endl;
+       cout << "array Size after given wrong value (less than one) : 1" << endl<< endl;
+    }
+   else
+    {
+       cout << "Your constrcutor is not Correct" << endl;
+       cout << "The arraySize should be at least One" << endl<<endl;
+    }
+
+   //*********** toString Function  is Tested  ***********
+   DynamicArray Darr4(1);
+   Darr4.addElement(1);
+   Darr4.addElement(2);
+   Darr4.addElement(3);
+   string s = Darr4.toString();
+   string str1 = "1,2,3";
+
+   if(s == str1 ){
+      cout << "Correct Result" << endl;
+      cout << "Elements of array :1,2,3" << endl<< endl;
+   }
+   else{
+      cout << "Result is incorrect " << endl;
+      cout << "your function prints:" ;
+      cout << s << endl;
+      cout << " But, Expected output should be:" << str1 <<endl<<endl;
+
+   }
+
+    //*********** Copy Constructor  is Tested  ***********
+   DynamicArray Darr5(1);
+   Darr5.addElement(10);
+   DynamicArray Darr6 = Darr5;
+   Darr6.addElement(100);
+   Darr6.addElement(1000);
+   string s1 = Darr5.toString();
+   string output1 = "10";
+   string s2 = Darr6.toString();
+   string output2 = "10,100,1000";
+   //if(Darr.getnumOfElements() == 3 && Darr.getarraySize() == 4)
+   if (s1==output1 && s2==output2){
+        cout << "Correct Result"<< endl;
+        cout << "First array has " << Darr5.toString() << endl;
+        cout << "Copied array after modification has " << Darr6.toString() << endl<< endl;
+    }
+   else{
+      cout << "Result is incorrect " << endl;
+      cout << "First array has " << Darr5.toString() << " should have: 10" << endl;
+      cout << "Copied array after modification has " << Darr5.toString() << " should have: 10,100,1000";
+   }
+
+   return 0;
+}
+
+Sample output
+
+Correct Result
+array Size after expansion is : 8
+
+Correct Result
+array Size after given wrong value (less than one) : 1
+
+Correct Result
+array Size is after given a wrong value (less than actual numOfElements) : 3
+
+Correct Result
+Elements of array :1,2,3
+
+Correct Result
+First array has 10
+Copied array after modification has 10,100,1000
