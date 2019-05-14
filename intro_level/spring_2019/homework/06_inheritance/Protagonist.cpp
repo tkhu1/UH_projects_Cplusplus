@@ -30,12 +30,12 @@ void Protagonist::setEquipment(string e) {equipment.setWeapon(e);}
 //overloaded operator function
 bool Protagonist::operator==(const Protagonist &protag) {
 	if (type == protag.getType() && 
-	  	age == protag.getAge() && 
-	  	equipment.getWeapon() == protag.equipment.getWeapon() &&
-			getOccupation() == protag.getOccupation() &&
-			getRace() == protag.getRace() &&
-			getGender() == protag.getGender()
-			)
+	    age == protag.getAge() && 
+	    equipment.getWeapon() == protag.equipment.getWeapon() &&
+	    getOccupation() == protag.getOccupation() &&
+	    getRace() == protag.getRace() &&
+	    getGender() == protag.getGender()
+	    )
 		return true;
 	return false;
 }
