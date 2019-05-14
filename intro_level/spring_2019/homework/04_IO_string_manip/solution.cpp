@@ -61,10 +61,11 @@ void reverser(string arr[], int last) {
 
 	string* fptr = arr;
 	string* lptr = arr + last - 1;
+	
 	while (fptr < lptr) { 
 		string temp = *fptr; 
-    *fptr = *lptr; 
-    *lptr = temp; 
+    	*fptr = *lptr; 
+    	*lptr = temp; 
 
 		fptr++;
 		lptr--;
@@ -72,7 +73,7 @@ void reverser(string arr[], int last) {
 }
 
 int main() {
-  //variables
+    //variables
 	ifstream infs;
 	ofstream outfs;
 	string filename, line;
@@ -89,7 +90,7 @@ int main() {
 		size++;
 	}
   
-  //cout << size; DEBUG
+    //cout << size; DEBUG
 
 	string arr[size];
 
@@ -145,19 +146,20 @@ int main() {
 			break;
 	}
  
-  infs.close(); //closes input file 
+    infs.close(); //closes input file 
 	outfs.close(); //closes output file
 
-  /* 
+    /* 
 	DEBUG
 	line = "have a great night     because it is a lit time brothers n sisters";
 	cout << wspace_remover(line) << endl;
 	num_chars(line, total_chars);
 	cout << total_chars << endl;
-  //num_words(line, total_words);
+    //num_words(line, total_words);
 	//cout << total_words << endl;
 	cout << vowel_replace(line) << endl;
-	cout << reverser(line);*/
+	cout << reverser(line);
+	*/
 
 	return 0;
 }
