@@ -11,7 +11,7 @@ Example of the input format is shown below.
   1U = 6.7F
   1U = 7.8G
 
-exchange rate between A and B can be calculated using the following equation
+Exchange rate between A and B can be calculated using the following equation:
 
 A2B = A2U * U2B
 where A2B , A2U , and U2B are the exchange rates between A and B, A and U, and U and B, respectively.
