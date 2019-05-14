@@ -8,13 +8,13 @@ using namespace std;
 
 //constructors
 Protagonist::Protagonist():Character() {
-  type = "Warrior";
+ 	type = "Warrior";
 	age = 25;
 }
 
 Protagonist::Protagonist(string ty, int ag):Character() {
 	type = ty;
-  age = ag;
+	age = ag;
 }
 
 //getter functions
