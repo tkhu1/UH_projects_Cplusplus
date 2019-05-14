@@ -25,6 +25,7 @@ int main(){
        cout << "Your arraySize after Expansion is : " << Darr.getArraySize() << endl;
        cout << "Expected Output : 8 " <<endl<< endl;
    }
+   
    //*********** Constructor with invalid input  is Tested  ***********
    DynamicArray Darr2(0);
    if (Darr2.getArraySize() == 1 )
@@ -37,8 +38,6 @@ int main(){
        cout << "Your constructor is not correct" << endl;
        cout << "The arraySize should be at least One" << endl<<endl;
    }
-
-
 
    //*********** toString Function  is Tested  ***********
    DynamicArray Darrd1(1);
@@ -60,7 +59,7 @@ int main(){
       cout << " But, expected output should be:" << str1 <<endl<<endl;
    }
 
-  //*********** Copy Constructor  is Tested  ***********
+   //*********** Copy Constructor  is Tested  ***********
    DynamicArray Darr5(1);
    Darr5.addElement(10);
    DynamicArray Darr6 = Darr5;
@@ -84,5 +83,5 @@ int main(){
       cout << "Copied array after modification has " << Darr6.toString() << " should have: 10,1000";
    }
 
-return 0;
+   return 0;
 }
