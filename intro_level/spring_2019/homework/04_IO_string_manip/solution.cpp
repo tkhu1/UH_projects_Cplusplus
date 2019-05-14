@@ -45,9 +45,9 @@ string vowel_replace(string line) {
 		if ((line[i] == 'a') || (line[i] == 'A') ||
 		    (line[i] == 'e') || (line[i] == 'E') ||
 		    (line[i] == 'i') || (line[i] == 'I') ||
-				(line[i] == 'o') || (line[i] == 'O') ||
-			  (line[i] == 'u') || (line[i] == 'U')) {
-				 result += '3';
+		    (line[i] == 'o') || (line[i] == 'O') ||
+		    (line[i] == 'u') || (line[i] == 'U')) {
+			result += '3';
 		}
 		else {
 			result += line[i];
