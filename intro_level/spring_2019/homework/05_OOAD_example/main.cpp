@@ -28,15 +28,15 @@ int main(){
    //*********** Constructor with invalid input  is Tested  ***********
    DynamicArray Darr2(0);
    if (Darr2.getArraySize() == 1 )
-    {
+   {
        cout << "Correct Result" << endl;
        cout << "array Size after given wrong value (less than one) : 1" << endl<< endl;
-    }
+   }
    else
-    {
+   {
        cout << "Your constructor is not correct" << endl;
        cout << "The arraySize should be at least One" << endl<<endl;
-    }
+   }
 
 
 
@@ -50,15 +50,14 @@ int main(){
    string s = Darrd1.toString();
    string str1 = "1,2,3,11";
 
-   if(s == str1 ){
+   if(s == str1 ) {
       cout << "Correct Result for toString" << endl << endl;
    }
-   else{
+   else {
       cout << "Result is incorrect " << endl;
       cout << "your function prints:" ;
       cout << s << endl;
       cout << " But, expected output should be:" << str1 <<endl<<endl;
-
    }
 
   //*********** Copy Constructor  is Tested  ***********
@@ -74,12 +73,12 @@ int main(){
    string s2 = Darr6.toString();
    string output2 = "10,1000";
    //if(Darr.getnumOfElements() == 3 && Darr.getarraySize() == 4)
-   if (s1==output1 && s2==output2){
+   if (s1==output1 && s2==output2) {
         cout << "Correct Result"<< endl;
         cout << "First array has " << Darr5.toString() << endl;
         cout << "Copied array after modification has " << Darr6.toString() << endl<< endl;
-    }
-   else{
+   }
+   else {
       cout << "Result is incorrect " << endl;
       cout << "First array has " << Darr5.toString() << " should have: 10" << endl;
       cout << "Copied array after modification has " << Darr6.toString() << " should have: 10,1000";
