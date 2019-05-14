@@ -1,0 +1,120 @@
+In this homework, you are required to use polymorphism to design classes and implement a currency converter.
+
+Assume that we have currency A, B, C, D, E, F, G, and a universal currency U. You will read the exchange rates from std::cin. 
+Example of the input format is shown below.
+
+  1U = 1.2A
+  1U = 2.3B
+  1U = 3.4C
+  1U = 4.5D
+  1U = 5.6E
+  1U = 6.7F
+  1U = 7.8G
+
+exchange rate between A and B can be calculated using the following equation
+
+A2B = A2U * U2B
+where A2B , A2U , and U2B are the exchange rates between A and B, A and U, and U and B, respectively.
+
+or
+
+A2B = U2B / U2A
+Your goal is to output the exchange rates between any two currencies in A-G. Output format is listed below with two decimals' precision.
+
+  1A = 1.92B
+  1A = 2.83C
+  1A = 3.75D
+  1A = 4.67E
+  1A = 5.58F
+  1A = 6.50G
+  1B = 0.52A
+  1B = 1.48C
+  1B = 1.96D
+  1B = 2.43E
+  1B = 2.91F
+  1B = 3.39G
+  1C = 0.35A
+  1C = 0.68B
+  1C = 1.32D
+  1C = 1.65E
+  1C = 1.97F
+  1C = 2.29G
+  1D = 0.27A
+  1D = 0.51B
+  1D = 0.76C
+  1D = 1.24E
+  1D = 1.49F
+  1D = 1.73G
+  1E = 0.21A
+  1E = 0.41B
+  1E = 0.61C
+  1E = 0.80D
+  1E = 1.20F
+  1E = 1.39G
+  1F = 0.18A
+  1F = 0.34B
+  1F = 0.51C
+  1F = 0.67D
+  1F = 0.84E
+  1F = 1.16G
+  1G = 0.15A
+  1G = 0.29B
+  1G = 0.44C
+  1G = 0.58D
+  1G = 0.72E
+  1G = 0.86F
+
+Polymorphism refers to determining which program behavior to execute depending on data types. Function overloading is a form of 
+compile-time polymorphism wherein the compiler determines which of several identically-named functions to call based on the function's 
+arguments. Another form is run-time polymorphism (or the so-called late-binding) wherein the compiler cannot make the determination but 
+instead the determination is made while the program is running.
+
+For this homework, you are required to create a class converter that implements polymorphism, and its derived classes. The class 
+Converter provides a default exchange rate, while the derived Converter provides a specific rate. Therefore, the base class pointer 
+will produce different exchange rates when it points to different derived Converter objects.
+
+The class converter must include:
+
+a protected double attribute exchange_rate (set to 1.0 as default)
+a default constructor
+a function GetExchangeRate with no parameters that returns the exchange rate
+a function GetExchangeRate that takes as input two strings (or characters) and returns the exchange_rate value from the first to the 
+   second. For example, if a conversion rate is 1U = 1.2A, the function will return 1.2 when the input is ("U","A"), and 0.83 (1/1.2) 
+   when the input is ("A","U")
+a function SetExchangeRate which sets the exchange_rate value to a new value
+For each currency, you will need to create a "specialized" converter, which will look like the one in this example
+
+  class ConverterU_A : public Converter {
+  public:
+      virtual double GetExchangeRate(//parameters) const {
+                   //override from base class to return correct exchange rate
+      }
+  };
+  
+You must decide which functions in Converter and/or its derived classes need to be made virtual for the program to work correctly.
+
+The main function will start with
+
+  int main() {
+      ConverterU_A u2a;
+      ConverterU_B u2b;
+      ConverterU_C u2c;
+      ConverterU_D u2d;
+      ConverterU_E u2e;
+      ConverterU_F u2f;
+      ConverterU_G u2g;
+      Converter* converters[] = { &u2a, &u2b, &u2c, &u2d, &u2e, &u2f, &u2g };
+          // ...
+  }
+  
+and needs to be completed to acquire the input, set the converters, and print the output (hints in the template).
+
+You are required to use the array converters to complete this homework. Please DO NOT use u2a, u2b, u2c, u2d, u2e, u2f, or u2g.
+
+Hint:
+
+  double exchange_rate_a2b = converter[0]->GetExchangeRate("A", "U") * converter[1]->GetExchangeRate("U", "B");
+
+or
+
+  double exchange_rate_a2b = converter[1]->GetExchangeRate() / converter[0]->GetExchangeRate();
