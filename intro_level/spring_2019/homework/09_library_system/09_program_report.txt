@@ -1,0 +1,29 @@
+Tyler Hu
+ID: 
+
+Library Program
+
+I worked on this project solo. I divided my program into two main sections: one that handles login, and one that handles the actual 
+library menu functions. Each section was divided into two classes, with one class handling the base user, and the other the librarian. 
+
+First, my program prints a welcome screen. Then it goes into a separate function that handles initial login, where the user can choose 
+whether he is a customer or a librarian. Once the choice is made, it calls a class that handles the login depending on the user of choice. 
+In each login class, the function accepts a username and password, stores them in a struct, and then calls a function that checks to see 
+if the user input matches any of the structs in an array that was built from the password file. If it is not successful, then it removes a
+login attempt from the program defined attempt number (here is 3). Note that the login class is supposed to return an integer with "1" 
+symbolizing a successful customer login, "2" symbolizing a successful librarian login, and 3 if login fails. If all login attempts are 
+used, the program returns 3 (symbolizing exiting the program). Note that the base user login class is the parent class of the librarian 
+user class, which utilizes the virtual functions of its parent class. 
+
+If login is successful, main creates either a user or librarian menu class that handles library menu operations. Librarian menu class 
+inherits from the base user class and utilizes polymorphism via virtual functions. After printing out the menu for the user to select an 
+option, each class function generally first reads in the data from the books text file to an array of book structs. The customer search 
+function allows the customer to search for a specific book via different properties and allows him to either check in or check out the 
+book by setting it to either “available” or “not available”. The customer also can print out a whole list of books to check in or check 
+out. 
+
+The library menu class has more functions such as adding or deleting from the list of books. Adding a book is accomplished by creating a 
+new array with a size +1, then having the user input a new books properties. Deleting a book is accomplished by creating a new array with 
+a size -1, then reading the old array into the new one without the book that the user wants deleted. 
+
+All functions have exception handling to make sure that all of the user inputs are correct.
