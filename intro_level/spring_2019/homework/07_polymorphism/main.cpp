@@ -38,7 +38,7 @@ int main() {
 		converters[i]->SetExchangeRate(in_rate);
 	}
 
-  // output ////////////////////////////////////////////////////////////////////
+	// output ////////////////////////////////////////////////////////////////////
 	cout << setprecision(2) << fixed;
 
 	//sets the first currency
@@ -48,7 +48,7 @@ int main() {
 			//skips self-comparison
 			if (j != i) { 
 				double output_rate = converters[i]->GetExchangeRate(currencies[i], "U") * 
-														converters[j]->GetExchangeRate("U", currencies[j]);
+									 converters[j]->GetExchangeRate("U", currencies[j]);
 				cout << "1" << currencies[i] << " = " << output_rate << currencies[j] << "\n";
 			}
 		}
