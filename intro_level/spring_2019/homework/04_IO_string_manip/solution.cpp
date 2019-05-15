@@ -64,8 +64,8 @@ void reverser(string arr[], int last) {
 	
 	while (fptr < lptr) { 
 		string temp = *fptr; 
-    		*fptr = *lptr; 
-    		*lptr = temp; 
+    	*fptr = *lptr; 
+    	*lptr = temp; 
 
 		fptr++;
 		lptr--;
@@ -102,7 +102,7 @@ int main() {
 	switch (user_choice) {
 		//white space remover function
 		case 1:
-		  while (getline(infs, line)) {
+			while (getline(infs, line)) {
 				outfs << wspace_remover(line) << endl;
 			}
 			break;
@@ -145,10 +145,10 @@ int main() {
 			break;
 	}
  
-        infs.close(); //closes input file 
+    infs.close(); //closes input file 
 	outfs.close(); //closes output file
 
-        /* 
+    /* 
 	DEBUG
 	line = "have a great night     because it is a lit time brothers n sisters";
 	cout << wspace_remover(line) << endl;
