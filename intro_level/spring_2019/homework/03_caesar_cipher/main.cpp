@@ -33,34 +33,34 @@ string encryptor(string user_word, unsigned long long int shift)
 
 int main()
 {
-    int num_words; //stores number of words
+	int num_words; //stores number of words
     int user_choice; //stores user choice
     unsigned long long int user_shift; //stores user shift number
     bool cont1 = true; //checks if number of user words is a positive integer
     bool cont2 = true; //checks if user wishes to quit program 
 
-   //implements a loop so that it will continue asking until the user provides a positive integer
-   while(cont1) 
-   {  
-       cout <<"How many words are in your message? \n";
-       cout <<"Enter value: ";
+	//implements a loop so that it will continue asking until the user provides a positive integer
+	while(cont1) 
+    {  
+    	cout <<"How many words are in your message? \n";
+    	cout <<"Enter value: ";
          
-       // get user input integer here
-       cin >> num_words;
+    	// get user input integer here
+    	cin >> num_words;
       
-       if (num_words <= 0) 
-           cout <<"\nInvalid value. Please Re-enter a number of positive value\n";
-       else //leaves loop
-         cont1 = false;
-   }
+    	if (num_words <= 0) 
+        	cout <<"\nInvalid value. Please Re-enter a number of positive value\n";
+    	else //leaves loop
+        	cont1 = false;
+	}
 
-   //declares a dynamic array of string type with the specified number of elements
-   string* encrypt_arr; 
-   encrypt_arr = new string[num_words];
-   string* enc_ptr = encrypt_arr; //pointer to array
+	//declares a dynamic array of string type with the specified number of elements
+	string* encrypt_arr; 
+	encrypt_arr = new string[num_words];
+	string* enc_ptr = encrypt_arr; //pointer to array
     
-   while(cont2) 
-   {
+	while(cont2) 
+	{
        cout <<"\nSelect one of these options: (1) Get Message (2) Encrypt (3) Print (4) Quit";
        cout <<"\nSelection: ";
        
