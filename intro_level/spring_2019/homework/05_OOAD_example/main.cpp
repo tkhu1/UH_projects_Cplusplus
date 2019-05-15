@@ -6,8 +6,7 @@ using namespace std;
 
 int main(){
 
-//***********  addElements Function is Tested  ***********
-
+   //***********  addElements Function is Tested  ***********
    DynamicArray Darr(1);
    Darr.addElement(1);
    Darr.addElement(2);
@@ -49,7 +48,7 @@ int main(){
    string s = Darrd1.toString();
    string str1 = "1,2,3,11";
 
-   if(s == str1 ) {
+   if (s == str1 ) {
       cout << "Correct Result for toString" << endl << endl;
    }
    else {
