@@ -69,7 +69,7 @@ class LibrarianUserLogin : public BaseUserLogin {
 		LibrarianUserLogin() : BaseUserLogin() {holder.name = "admin"; holder.password = 		 																			  "password";}
 		//constructor
 		LibrarianUserLogin(string n, string pw) : BaseUserLogin() {holder.name = n; 
-		                                    holder.password = pw + "\0";} //to match array
+																   holder.password = pw + "\0";} //to match array
 		//login info getter
 		bool GetFinderStatus() {return LoginFinder();}
 
@@ -225,8 +225,8 @@ class UserBase {
 				//searchs book array
 				for (int i = 0; i < size; i++) {
 					if (search == bookArr[i].author || search == bookArr[i].title ||
-							search == bookArr[i].year || search == bookArr[i].publisher ||
-							search == bookArr[i].ISBN || search == bookArr[i].status) {
+						search == bookArr[i].year || search == bookArr[i].publisher ||
+						search == bookArr[i].ISBN || search == bookArr[i].status) {
 						//prints out found books
 						cout << "\nBOOK NUMBER (" << i+1 << ")" << endl;
 						cout << setfill('-') << setw(40) << ""; 
@@ -398,8 +398,7 @@ class UserBase {
 class UserLibrarian : public UserBase {
 	public:
 		//default constructor
-		UserLibrarian() : UserBase() { cout << "\nLibrarian Login successful.\n\n";
-		             						  		}
+		UserLibrarian() : UserBase() { cout << "\nLibrarian Login successful.\n\n"; }
 
 		//struct for each book
 		struct bookList {
@@ -505,8 +504,8 @@ class UserLibrarian : public UserBase {
 				//searchs book array
 				for (int i = 0; i < size; i++) {
 					if (search == bookArr[i].author || search == bookArr[i].title ||
-							search == bookArr[i].year || search == bookArr[i].publisher ||
-							search == bookArr[i].ISBN || search == bookArr[i].status) {
+						search == bookArr[i].year || search == bookArr[i].publisher ||
+						search == bookArr[i].ISBN || search == bookArr[i].status) {
 						//prints out found books
 						cout << "\nBOOK NUMBER (" << i+1 << ")" << endl;
 						cout << setfill('-') << setw(40) << ""; 
@@ -699,7 +698,7 @@ class UserLibrarian : public UserBase {
 			MainMenu(); //calls main menu
 		}
 
-    //delete a book 
+    	//delete a book 
 		void DeleteBooks() {
 			int size = 0; //for counting number of books
 			string filename = "books.txt";
@@ -767,12 +766,12 @@ class UserLibrarian : public UserBase {
 							delArr[i].status = bookArr[i].status;
 						}
 						for (int i = deleted; i < size-1; i++) {
-						delArr[i].title = bookArr[i+1].title;
-						delArr[i].author = bookArr[i+1].author;
-						delArr[i].year = bookArr[i+1].year;
-						delArr[i].publisher = bookArr[i+1].publisher;
-						delArr[i].ISBN = bookArr[i+1].ISBN;
-						delArr[i].status = bookArr[i+1].status;
+							delArr[i].title = bookArr[i+1].title;
+							delArr[i].author = bookArr[i+1].author;
+							delArr[i].year = bookArr[i+1].year;
+							delArr[i].publisher = bookArr[i+1].publisher;
+							delArr[i].ISBN = bookArr[i+1].ISBN;
+							delArr[i].status = bookArr[i+1].status;
 						}
 						cout << "\nBook deleted. Returning to main menu.\n" << endl;
 						FileWriter(delArr, deleted); //calls function to modify file
@@ -851,16 +850,16 @@ int loginMenu() {
 				else {
 					//outputs attempts remaining
 					cout << "\nUsername and or password not found. You have " << 
-									(attempts - loginAttempt) << 
-									" attempts remaining.\n";
+							(attempts - loginAttempt) << 
+							" attempts remaining.\n";
 					loginAttempt++;
 					//exits program
 					if (loginAttempt > attempts) {
 						cout << "Exiting portal. " << 
-										"Please contact the front desk for assistance.";
+								"Please contact the front desk for assistance.";
 						result = 3;
 					}
-			  }
+				}
 			}
 		}
 		else if (userChoice == "2") {
@@ -880,13 +879,13 @@ int loginMenu() {
 				else {
 					//outputs attempts remaining
 					cout << "\nUsername and or password not found. You have " << 
-									(attempts - loginAttempt) << 
-									" attempts remaining.\n";
+							(attempts - loginAttempt) << 
+							" attempts remaining.\n";
 					loginAttempt++;
 					//exits program
 					if (loginAttempt > attempts) {
 						cout << "Exiting portal. " << 
-										"Please contact the front desk for assistance.";
+								"Please contact the front desk for assistance.";
 						result = 3;
 					}
 			  }
