@@ -1,0 +1,48 @@
+BOOK
+TESTA
+TESTT
+TESTY
+TESTP
+TESTI
+Available
+
+BOOK
+Miguel de Cervantes
+Don Quixote
+1605
+Oxford Press
+F9JVVEVK5JSD5NU3
+Not Available
+
+BOOK
+F. Scott Fitzgerald
+The Great Gatsby
+1925
+NYC Press
+Q66TAQBBEWQ2XFXN
+Available
+
+BOOK
+Herman Melville
+Moby Dick
+1851
+Oxford Press
+JA56L8TQR9GBSBED
+Not Available
+
+BOOK
+William Shakespeare
+Hamlet
+1601
+Cambridge Press
+YY2J4E89PW5TMETL
+Not Available
+
+BOOK
+Leo Tolstoy
+War and Peace
+1869
+Moscow Printing
+7CZD6RK9HZTAQJFX
+Available
+
