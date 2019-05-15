@@ -74,12 +74,12 @@ class SpecialArray {
 			TheType inElement;
 
 			for (int row = 0; row < numRows; row++) {
-					for (int col = 0; col < numCols; col++) {
-						input >> inElement;
-						arr[row][col] = inElement;
-						//cout << arr[row][col]; DEBUG
-					}
+				for (int col = 0; col < numCols; col++) {
+					input >> inElement;
+					arr[row][col] = inElement;
+					//cout << arr[row][col]; DEBUG
 				}
+			}
 		}
 
 		//returns max 
@@ -87,11 +87,11 @@ class SpecialArray {
 			TheType maxResult = arr[0][0];
 
 			for (int row = 0; row < numRows; row++) {
-					for (int col = 0; col < numCols; col++) {
-						if (arr[row][col] > maxResult)
-							maxResult = arr[row][col];
-					}
+				for (int col = 0; col < numCols; col++) {
+					if (arr[row][col] > maxResult)
+						maxResult = arr[row][col];
 				}
+			}
 			return maxResult;
 		}
 
@@ -100,11 +100,11 @@ class SpecialArray {
 			TheType minResult = arr[0][0];
 
 			for (int row = 0; row < numRows; row++) {
-					for (int col = 0; col < numCols; col++) {
-						if (arr[row][col] < minResult)
-							minResult = arr[row][col];
-					}
+				for (int col = 0; col < numCols; col++) {
+					if (arr[row][col] < minResult)
+						minResult = arr[row][col];
 				}
+			}
 			return minResult;
 		}
 
@@ -129,11 +129,11 @@ class SpecialArray {
 		//prints to display
 		void print() {
 			for (int row = 0; row < numRows; row++) {
-					for (int col = 0; col < numCols; col++) {
-						cout << arr[row][col] << " ";
-					}
-					cout << endl;
+				for (int col = 0; col < numCols; col++) {
+					cout << arr[row][col] << " ";
 				}
+				cout << endl;
+			}
 		}
 
 		//writes to file
@@ -145,8 +145,8 @@ class SpecialArray {
 			outFile.open(outFilename);
 
 			if (!outFile.is_open()) {
-      cout << "Could not open file." << endl;
-   		}
+      			cout << "Could not open file." << endl;
+   			}
 	
 			for (int row = 0; row < numRows; row++) {
 				for (int col = 0; col < numCols; col++) {
