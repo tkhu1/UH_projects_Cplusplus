@@ -4,7 +4,6 @@
 #include <string>
 using namespace std;
 
-
 int measureElementsPerLine(ifstream& inFile) {
 	string temp;
 	int counter = 1;
@@ -13,17 +12,17 @@ int measureElementsPerLine(ifstream& inFile) {
 		if (temp[i] == ' ') {
 			counter++;
 		}
-  }   
+	}   
 	//cout << counter << endl; //DEBUG
 	return counter;
 }
 
 int measureLines(ifstream& inFile) {
-  string temp;
+	string temp;
 	int counter = 0;
 	while (getline(inFile, temp)) {
 	 	counter++;
-	 }
+	}
 	//cout << counter << endl; //DEBUG
 	return counter;
 }
@@ -33,10 +32,10 @@ int main()
 	int numOfLines, numOfElements;
 	string fileName, dataType;
 	cin >> fileName >> dataType;
-  ifstream inFile(fileName);
+ 	ifstream inFile(fileName);
 
-  // Add try statement below
-  try {
+	// Add try statement below
+	try {
 		//checks if file exists
 		if (!inFile.is_open()) {
 			throw runtime_error("File does not exist.");
@@ -56,8 +55,8 @@ int main()
 		inFile.close();
 
 		if (dataType == "int"){
-				SpecialArray<int> specialArray(numOfLines, numOfElements);
-				inFile.open(fileName);
+			SpecialArray<int> specialArray(numOfLines, numOfElements);
+			inFile.open(fileName);
 			specialArray.readFile(inFile);
 			inFile.close();
 			specialArray.print();
@@ -66,8 +65,8 @@ int main()
 			specialArray.print();
 		}
 		else if (dataType == "string"){
-				SpecialArray<string> specialArray(numOfLines, numOfElements);
-				inFile.open(fileName);
+			SpecialArray<string> specialArray(numOfLines, numOfElements);
+			inFile.open(fileName);
 			specialArray.readFile(inFile);
 			inFile.close();   
 			specialArray.print();
@@ -80,7 +79,7 @@ int main()
 	catch (runtime_error& except) {
 		//prints the error message passed by throw statement
 		cout << except.what() << endl;
-  }
+	}
 	
 	return 0;
 }
