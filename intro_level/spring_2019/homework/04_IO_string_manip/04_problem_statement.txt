@@ -1,5 +1,3 @@
-Homework 4 Instructions
-
 In this homework, you will be tasked with creating functions to manipulate strings that come from files and then outputting the strings to 
 another file. All of these functions are housed together in a menu. The user will be asked to input a file name and then their menu 
 selection.
