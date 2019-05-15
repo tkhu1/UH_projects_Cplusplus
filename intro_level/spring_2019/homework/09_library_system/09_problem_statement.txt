@@ -1,0 +1,33 @@
+Final Project: Library 
+
+In this project, you will be tasked to implement a small library system to interact with users of different roles (i.e., a librarian or 
+a customer). The user should log in to the system first using their login credential information stored in some text files -- one for each 
+type of user, but the formatting is up to you. An example format could be the following, where each line holds the information for one 
+user and passwords are separated from usernames with a space:
+
+----Example User Info file:
+Username1 password1
+Username2 password2
+
+The user will be given certain number of attempts to login (say, 3). If the user cannot provide the correct login information within the 
+given attempts, the system will exit (or the corresponding account will be frozen -- it is up to you for the consequence). Otherwise, the 
+program will enter and display different menu options for the user to select with. Note that librarians and customers should see different 
+lists of options. For instance, librarians should be able to add books to the library as well as remove them, while customers cannot. 
+Customers should be able to search and select books to check out or return from the existing list of books. 
+
+A text file must be used to store information about the books owned by the library (i.e., mimicking a book database system). Examples of 
+the information of a book that may be stored include its title, author(s), ISBN number, year of publication, publisher, status/whether the 
+book is available to check out, etc.. Again, exact formatting is up to you. When the librarians and/or customers change the list of books 
+with their available operations, these changes should be reflected in the text file where the book information is stored.
+ 
+Mandatory Criteria:
+- (80 points) The program as a whole:
+- Must contain 2-3 classes (programs containing less than 2 classes will receive a 50% penalty)
+- Must use file I/O (programs with no file I/O will receive a 20% penalty)
+- (20 points) A one-page description of how the classes were constructed and how work was divided amongst group members (please list names 
+  of the members)
+
+Bonus Points:
+- (up to 5 points) If inheritance is used
+- (up to 5 points) If polymorphism is used
+- (up to 5 point) If exception handling is used
