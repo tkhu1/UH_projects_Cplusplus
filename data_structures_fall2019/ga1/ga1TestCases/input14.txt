@@ -1,0 +1,6 @@
+Dani Alves, 3, Defender
+Sergio Ramos, 1, Defender
+Edinson Cavani, 9, Forward
+Marcelo, 12, Defender
+Gerard Pique, 10, Defender
+Darijo Srna, 11, Midfielder

@@ -1,0 +1,15 @@
+RUNTIME LOG
+
+JOB NAME    JOB PRIORITY    JOB LENGTH    START TIME    END TIME    WAIT TIME
+Job 2       5               18            16            150         119
+Job 5       5               15            22            165         116
+Job 6       5               15            25            180         128
+Job 8       2               14            6             144         112
+Job 10      4               18            13            198         152
+Job 2       5               18            16            216         167
+Job 5       5               15            22            165         116
+Job 6       5               15            25            180         128
+Job 10      4               18            13            198         152
+Job 2       5               18            16            216         167
+
+Number of execution rounds completed: 5

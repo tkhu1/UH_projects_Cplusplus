@@ -1,0 +1,36 @@
+
+Deleting all        Unsorted Array      0.0001180000 sec
+                    Sorted Array        0.0000010000 sec
+                    Hash Table          0.0000010000 sec
+
+Inserting 99        Unsorted Array      0.0000050000 sec
+                    Sorted Array        0.0000020000 sec
+                    Hash Table          0.0000020000 sec
+
+Inserting all       Unsorted Array      0.0002420000 sec
+                    Sorted Array        0.0001890000 sec
+                    Hash Table          0.0000050000 sec
+
+Searching 99        Unsorted Array      0.0000470000 sec
+                    Sorted Array        0.0000020000 sec
+                    Hash Table          0.0000020000 sec
+
+Deleting 99        Unsorted Array      0.0000050000 sec
+                   Sorted Array        0.0000380000 sec
+                   Hash Table          0.0000020000 sec
+
+Deleting all        Unsorted Array      0.0000060000 sec
+                    Sorted Array        0.0000010000 sec
+                    Hash Table          0.0000010000 sec
+
+Inserting all       Unsorted Array      0.0000090000 sec
+                    Sorted Array        0.0000050000 sec
+                    Hash Table          0.0000020000 sec
+
+Searching 44        Unsorted Array      0.0000530000 sec
+                    Sorted Array        0.0000020000 sec
+                    Hash Table          0.0000020000 sec
+
+Searching 99        Unsorted Array      0.0000100000 sec
+                    Sorted Array        0.0000020000 sec
+                    Hash Table          0.0000030000 sec

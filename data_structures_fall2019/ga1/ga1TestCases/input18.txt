@@ -1,0 +1,19 @@
+Mathieu Valbuena, 3, Midfielder
+Mario Gomez, 20, Forward
+Giorgio Chiellini, 9, Defender
+Javier Zanetti, 4, Defender/midfielder
+Hernanes, 7, Midfielder
+Xavi, 15, Midfielder
+Eden Hazard, 2, Midfielder
+David Villa, 16, Forward
+Hulk, 5, Forward
+Victor Wanyama, 10, Defender/midfielder
+Marcelo, 8, Defender
+Petr Cech, 14, Goalkeeper
+Robin van Persie, 19, Forward
+Samuel Eto∆o, 18, Forward
+Andres Iniesta, 1, Midfielder
+Klaas Jan Huntelaar, 11, Forward
+Leonardo Bonucci, 17, Defender
+Cesc Fabregas, 13, Midfielder
+Luis Suarez, 12, Forward

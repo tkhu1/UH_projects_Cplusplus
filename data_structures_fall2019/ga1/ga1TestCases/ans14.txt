@@ -1,0 +1,4 @@
+Marcelo: 4
+Darijo Srna: 1
+Sergio Ramos: 5
+I: -1
