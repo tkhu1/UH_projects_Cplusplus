@@ -1,0 +1,1 @@
+Implemented in this assignment a virtual memory manager with paged segments, and then simulated its operation for multiple page replacement algorithms. The program contains a combination of Unix/Linux processes (such as the page fault handler, disk driver, and page replacement process) synchronized by Unix/Linux semaphores, and simulators (such as the paging disk).

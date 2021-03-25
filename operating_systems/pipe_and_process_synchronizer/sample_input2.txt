@@ -1,0 +1,10 @@
+input_var a,b;
+5 2
+vertex v0 = TIMES, v1 = MINUS, v2 = MINUS, v3 = PLUS, v4 = PLUS;
+a -> v1;
+b -> v1 -> v2;
+b -> v2 -> v3;
+a -> v3 -> v4;
+b -> v4 -> v0;
+b -> v0;
+write(v0, v1, v2, v3, v4).

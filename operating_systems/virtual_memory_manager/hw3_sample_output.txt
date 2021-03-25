@@ -1,0 +1,7 @@
+Number of page faults for each process:
+Process 101: 2;
+Process 102: 2;
+Process 103: 1;
+Process 104: 1;
+
+Working set: min size: 1; max size: 6.

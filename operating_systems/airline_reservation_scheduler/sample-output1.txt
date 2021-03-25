@@ -1,0 +1,11 @@
+Tom reserves SA113 2A successfully at time 3, deadline met.
+Jane reserves AA197 1B successfully at time 5, deadline met.
+Jerry waits on AA197 1B successfully at time 7, deadline met.
+Jane tickets DEL124 3E successfully at time 11, deadline met.
+Sam waitany on SA113 2A at time 13, deadline met.
+Tom cancels SA113 2A at time 17, deadline missed.
+Agent 2 exits.
+Sam has reserved SA113 2A at time 17 automatically resulting from his waitany.
+Sam has 1 reservation: SA113 2A, at time 21, deadline met.
+Jerry fails to reserve AA197 1B because it is occupied.
+Agent 1 exits.
