@@ -1,2 +1,0 @@
-Degree=3
-Level 30
